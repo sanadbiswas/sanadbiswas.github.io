@@ -1,20 +1,21 @@
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav-links');
+document.getElementById('year').textContent = new Date().getFullYear();
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-    toggle.textContent = isOpen ? '✕' : '☰';
-  });
+async function loadGitHubStats() {
+  try {
+    const response = await fetch('https://api.github.com/users/sanadbiswas');
+    if (!response.ok) return;
+    const data = await response.json();
 
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.textContent = '☰';
-    });
-  });
+    const repoCount = document.getElementById('repoCount');
+    const followerCount = document.getElementById('followerCount');
+    const followingCount = document.getElementById('followingCount');
+
+    if (repoCount) repoCount.textContent = data.public_repos ?? '—';
+    if (followerCount) followerCount.textContent = data.followers ?? '—';
+    if (followingCount) followingCount.textContent = data.following ?? '—';
+  } catch (error) {
+    console.warn('GitHub profile stats could not be loaded.', error);
+  }
 }
 
-document.getElementById('year').textContent = new Date().getFullYear();
+loadGitHubStats();
