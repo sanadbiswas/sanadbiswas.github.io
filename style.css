@@ -59,8 +59,8 @@ img{display:block;max-width:100%}
 .mini-card{border:1px solid var(--border);border-radius:6px;padding:14px;background:var(--surface)}
 .mini-card p{font-size:.8rem;margin:0;color:var(--muted)}
 
-.tool-list{display:flex;flex-wrap:wrap;gap:8px}
-.tool-list span{border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:7px 10px;font-size:.78rem;font-weight:600}
+.tool-list{display:flex;flex-wrap:wrap;gap:7px}
+.tool-list span{border:1px solid var(--border);background:var(--surface);border-radius:6px;padding:6px 9px;font-size:.74rem;font-weight:600}
 
 .stats-card{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #30363d;border-radius:7px;overflow:hidden;background:#24292f;color:#fff;max-width:620px}
 .stat{min-height:105px;display:grid;place-items:center;align-content:center;text-align:center;padding:14px}
