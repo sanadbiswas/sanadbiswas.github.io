@@ -182,3 +182,17 @@ img{display:block;max-width:100%}
   .highlight-strip,.project-facts,.skill-groups{grid-template-columns:1fr}
   .section-heading-row{flex-direction:column;gap:8px}
 }
+
+
+/* CV-grounded refinements */
+.education-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.education-list article{border:1px solid #dce2e7;border-radius:10px;padding:14px 15px;background:linear-gradient(180deg,#fff,#f8fafb)}
+.education-list h4{margin:0 0 5px;font-size:.86rem;line-height:1.4}
+.education-list p{margin:0!important;font-size:.76rem!important;color:var(--muted)!important}
+.recognition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.recognition-grid>div{border:1px solid #dce2e7;border-radius:10px;padding:14px 15px;background:#fff}
+.recognition-grid strong{display:block;font-size:.84rem;line-height:1.4;margin-bottom:5px}
+.recognition-grid p{font-size:.75rem!important;color:var(--muted)!important;margin:0!important}
+@media(max-width:700px){
+  .education-list,.recognition-grid{grid-template-columns:1fr}
+}
