@@ -3,7 +3,7 @@
   --surface:#f6f8fa;
   --border:#d0d7de;
   --text:#1f2328;
-  --muted:#656d76;
+  --muted:#4b5563;
   --blue:#0b5cad;
   --blue-soft:#eaf3fb;
   --shadow:0 8px 24px rgba(31,35,40,.055);
@@ -86,8 +86,9 @@ img{display:block;max-width:100%}
 
 .publication-item{padding:16px 0 16px 16px;border-bottom:1px solid #eaeef2;border-left:2px solid #e2e8ee}
 .publication-item:last-child{border-bottom:0;padding-bottom:0}
-.publication-item strong{display:block;font-size:.89rem;line-height:1.48;margin-bottom:6px;color:#24292f}
+.publication-item>strong{display:block;font-size:.89rem;line-height:1.48;margin-bottom:6px;color:#24292f}
 .publication-item p{font-size:.8rem;color:var(--muted);margin:0}
+.publication-item p strong{display:inline;font-size:inherit;line-height:inherit;margin:0;color:inherit}
 
 .teaching-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .teaching-list>div{border:1px solid #dce2e7;border-radius:10px;padding:15px;background:linear-gradient(180deg,#fff,#f8fafb)}
@@ -120,19 +121,16 @@ img{display:block;max-width:100%}
   .project-list span{white-space:normal}
 }
 
-
 .highlight-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid #d8dee4;border-radius:12px;overflow:hidden;background:#d8dee4;box-shadow:var(--shadow)}
 .highlight-strip>div{background:#fff;padding:18px 20px}
 .highlight-strip strong{display:block;font-size:1.06rem;color:var(--text);margin-bottom:3px}
 .highlight-strip span{display:block;color:var(--muted);font-size:.72rem;line-height:1.35}
-
 
 .skill-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px}
 .skill-group{min-width:0}
 .skill-group h4{margin:0 0 9px!important;font-size:.73rem!important;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 
 .item-kicker{display:block;color:var(--blue);font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
-
 
 /* Industry portfolio refinements */
 .industry-role{margin:0 0 10px;color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.01em}
@@ -181,18 +179,4 @@ img{display:block;max-width:100%}
   .hero-card h2{font-size:1.4rem}
   .highlight-strip,.project-facts,.skill-groups{grid-template-columns:1fr}
   .section-heading-row{flex-direction:column;gap:8px}
-}
-
-
-/* CV-grounded refinements */
-.education-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.education-list article{border:1px solid #dce2e7;border-radius:10px;padding:14px 15px;background:linear-gradient(180deg,#fff,#f8fafb)}
-.education-list h4{margin:0 0 5px;font-size:.86rem;line-height:1.4}
-.education-list p{margin:0!important;font-size:.76rem!important;color:var(--muted)!important}
-.recognition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.recognition-grid>div{border:1px solid #dce2e7;border-radius:10px;padding:14px 15px;background:#fff}
-.recognition-grid strong{display:block;font-size:.84rem;line-height:1.4;margin-bottom:5px}
-.recognition-grid p{font-size:.75rem!important;color:var(--muted)!important;margin:0!important}
-@media(max-width:700px){
-  .education-list,.recognition-grid{grid-template-columns:1fr}
 }
